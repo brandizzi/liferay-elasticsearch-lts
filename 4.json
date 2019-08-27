@@ -1,0 +1,13 @@
+{
+    "query": {
+        "function_score": {
+             "field_value_factor": {
+                "field": "displayDate",
+                "factor": 0.1
+             },
+             "query": {
+                "match_all": {}
+             }
+        }
+    }
+}
