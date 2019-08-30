@@ -1,0 +1,16 @@
+# grade (0-4)	queryid	docId	title
+# 
+# Add your keyword strings below, the feature script will
+# Use them to populate your query templates
+#
+# qid:1: alien
+# qid:2: rocky
+# qid:3: bullwinkle
+#
+# https://sourceforge.net/p/lemur/wiki/RankLib%20File%20Format/
+#
+#
+4	qid:1 # com.liferay.blogs.model.BlogsEntry_PORTLET_168574	Alien
+3	qid:1 # com.liferay.blogs.model.BlogsEntry_PORTLET_71227	Alien³
+3	qid:1 # com.liferay.blogs.model.BlogsEntry_PORTLET_71234	Alien: Resurrection
+3	qid:1 # com.liferay.blogs.model.BlogsEntry_PORTLET_177621	Aliens
