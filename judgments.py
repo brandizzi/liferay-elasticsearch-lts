@@ -46,7 +46,7 @@ def _judgments_from_body(lines):
         <judgment> qid:<queryid> # docId <rest of comment ignored...)"""
     # Regex can be debugged here:
     # http://www.regexpal.com/?fam=96565
-    regex = re.compile('^(\d)\s+qid:(\d+)\s+#\s+(\w+).*')
+    regex = re.compile('^(\d)\s+qid:(\d+)\s+#\s+(\S+).*')
     for line in lines:
         Logger.logger.info(line)
         m = re.match(regex, line)
