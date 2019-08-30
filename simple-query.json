@@ -1,0 +1,26 @@
+GET liferay-20096/_search?filter_path=hits.hits._source.title,hits.hits._source.assetTagNames,hits.hits._source.displayDate
+{
+  "query": {
+    "multi_match": {
+      "query": "alien",
+      "fields": [
+        "title",
+        "overview"
+      ]
+    }
+  },
+  "rescore": {
+    "query": {
+      "rescore_query": {
+        "sltr": {
+          "params": {
+            "keywords": "alien"
+          },
+          "model": "test_6"
+        }
+      }
+    },
+    "window_size": 1000
+  },
+  "size": 10
+}

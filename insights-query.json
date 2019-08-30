@@ -1,0 +1,4733 @@
+GET liferay-20096/_search
+{
+  "from": 0,
+  "size": 20,
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "bool": {
+            "must": [
+              {
+                "bool": {
+                  "should": [
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "comments": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "comments": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "comments": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "content": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "content": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "content": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "match": {
+                              "description": {
+                                "query": "alien",
+                                "operator": "OR",
+                                "prefix_length": 0,
+                                "max_expansions": 50,
+                                "lenient": false,
+                                "auto_generate_synonyms_phrase_query": true
+                              }
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "description": {
+                                "query": "alien",
+                                "slop": 50
+                              }
+                            }
+                          },
+                          {
+                            "match_phrase": {
+                              "description": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "properties": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "properties": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "properties": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "title": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "title": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "title": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "url": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "url": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "url": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "should": [
+                          {
+                            "wildcard": {
+                              "userName": {
+                                "wildcard": "*alien*"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "assetCategoryTitles_en_US": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "assetCategoryTitles_en_US": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "assetCategoryTitles_en_US": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "assetTagNames_en_US": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "assetTagNames_en_US": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "assetTagNames_en_US": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "content": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "content": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "content": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "content_en_US": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "content_en_US": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "content_en_US": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "title": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "title": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "title": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "title_en_US": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "title_en_US": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "title_en_US": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "content_en_US": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "content_en_US": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "content_en_US": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "subtitle": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "subtitle": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "subtitle": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "title_en_US": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "title_en_US": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "title_en_US": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "should": [
+                          {
+                            "wildcard": {
+                              "userName": {
+                                "wildcard": "*alien*"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "ddmContent_en_US": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "ddmContent_en_US": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "ddmContent_en_US": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "articleId": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "articleId": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "articleId": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "classPK": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "classPK": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "classPK": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "content_zh_CN": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "content_zh_CN": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "content_zh_CN": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "content_fi_FI": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "content_fi_FI": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "content_fi_FI": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "content_ca_ES": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "content_ca_ES": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "content_ca_ES": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "content_de_DE": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "content_de_DE": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "content_de_DE": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "content_hu_HU": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "content_hu_HU": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "content_hu_HU": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "content_pt_BR": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "content_pt_BR": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "content_pt_BR": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "content_es_ES": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "content_es_ES": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "content_es_ES": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "content_ar_SA": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "content_ar_SA": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "content_ar_SA": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "content_sv_SE": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "content_sv_SE": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "content_sv_SE": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "content_nl_NL": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "content_nl_NL": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "content_nl_NL": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "content_fr_FR": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "content_fr_FR": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "content_fr_FR": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "content_ja_JP": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "content_ja_JP": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "content_ja_JP": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "content_en_US": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "content_en_US": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "content_en_US": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "description_ja_JP": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "description_ja_JP": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "description_ja_JP": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "description_fr_FR": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "description_fr_FR": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "description_fr_FR": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "description_fi_FI": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "description_fi_FI": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "description_fi_FI": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "description_ca_ES": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "description_ca_ES": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "description_ca_ES": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "description_de_DE": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "description_de_DE": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "description_de_DE": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "description_hu_HU": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "description_hu_HU": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "description_hu_HU": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "description_ar_SA": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "description_ar_SA": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "description_ar_SA": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "description_pt_BR": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "description_pt_BR": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "description_pt_BR": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "description_zh_CN": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "description_zh_CN": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "description_zh_CN": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "description_es_ES": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "description_es_ES": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "description_es_ES": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "description_en_US": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "description_en_US": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "description_en_US": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "description_nl_NL": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "description_nl_NL": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "description_nl_NL": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "description_sv_SE": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "description_sv_SE": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "description_sv_SE": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "entryClassPK": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "entryClassPK": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "entryClassPK": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "title_es_ES": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "title_es_ES": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "title_es_ES": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "title_ar_SA": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "title_ar_SA": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "title_ar_SA": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "title_nl_NL": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "title_nl_NL": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "title_nl_NL": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "title_zh_CN": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "title_zh_CN": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "title_zh_CN": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "title_ja_JP": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "title_ja_JP": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "title_ja_JP": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "title_pt_BR": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "title_pt_BR": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "title_pt_BR": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "title_sv_SE": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "title_sv_SE": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "title_sv_SE": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "title_fi_FI": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "title_fi_FI": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "title_fi_FI": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "title_en_US": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "title_en_US": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "title_en_US": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "title_ca_ES": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "title_ca_ES": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "title_ca_ES": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "title_de_DE": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "title_de_DE": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "title_de_DE": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "title_hu_HU": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "title_hu_HU": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "title_hu_HU": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "title_fr_FR": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "title_fr_FR": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "title_fr_FR": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "should": [
+                          {
+                            "wildcard": {
+                              "userName": {
+                                "wildcard": "*alien*"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "match": {
+                              "description": {
+                                "query": "alien",
+                                "operator": "OR",
+                                "prefix_length": 0,
+                                "max_expansions": 50,
+                                "lenient": false,
+                                "auto_generate_synonyms_phrase_query": true
+                              }
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "description": {
+                                "query": "alien",
+                                "slop": 50
+                              }
+                            }
+                          },
+                          {
+                            "match_phrase": {
+                              "description": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "description_en_US": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "description_en_US": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "description_en_US": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "title": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "title": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "title": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "title_en_US": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "title_en_US": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "title_en_US": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "description_en_US": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "description_en_US": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "description_en_US": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "title_en_US": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "title_en_US": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "title_en_US": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "ddmContent": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "ddmContent": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "ddmContent": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "extension": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "extension": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "extension": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "fileEntryTypeId": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "fileEntryTypeId": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "fileEntryTypeId": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "should": [
+                          {
+                            "wildcard": {
+                              "path": {
+                                "wildcard": "*alien*"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "content_en_US": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "content_en_US": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "content_en_US": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "city": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "city": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "city": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "country": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "country": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "country": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "should": [
+                          {
+                            "wildcard": {
+                              "emailAddress": {
+                                "wildcard": "*alien*"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "firstName": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "firstName": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "firstName": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "fullName": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "fullName": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "fullName": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "jobTitle": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "jobTitle": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "jobTitle": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "lastName": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "lastName": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "lastName": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "middleName": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "middleName": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "middleName": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "region": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "region": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "region": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "should": [
+                          {
+                            "wildcard": {
+                              "screenName": {
+                                "wildcard": "*alien*"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "street": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "street": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "street": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "zip": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "zip": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "zip": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "content_en_US": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "content_en_US": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "content_en_US": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "title_en_US": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "title_en_US": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "title_en_US": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "should": [
+                          {
+                            "wildcard": {
+                              "userName": {
+                                "wildcard": "*alien*"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "ddmContent_en_US": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "ddmContent_en_US": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "ddmContent_en_US": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "content_en_US": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "content_en_US": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "content_en_US": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "title_en_US": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "title_en_US": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "title_en_US": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "content": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "content": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "content": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "match": {
+                              "description": {
+                                "query": "alien",
+                                "operator": "OR",
+                                "prefix_length": 0,
+                                "max_expansions": 50,
+                                "lenient": false,
+                                "auto_generate_synonyms_phrase_query": true
+                              }
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "description": {
+                                "query": "alien",
+                                "slop": 50
+                              }
+                            }
+                          },
+                          {
+                            "match_phrase": {
+                              "description": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "bool": {
+                              "should": [
+                                {
+                                  "match": {
+                                    "title": {
+                                      "query": "alien",
+                                      "operator": "OR",
+                                      "prefix_length": 0,
+                                      "max_expansions": 50,
+                                      "lenient": false,
+                                      "auto_generate_synonyms_phrase_query": true
+                                    }
+                                  }
+                                },
+                                {
+                                  "match_phrase_prefix": {
+                                    "title": {
+                                      "query": "alien",
+                                      "slop": 0,
+                                      "max_expansions": 50
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "match_phrase": {
+                              "title": {
+                                "query": "alien",
+                                "slop": 0,
+                                "boost": 2
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "should": [
+                          {
+                            "wildcard": {
+                              "userName": {
+                                "wildcard": "*alien*"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "filter": [
+        {
+          "bool": {
+            "must": [
+              {
+                "term": {
+                  "companyId": {
+                    "value": "20096"
+                  }
+                }
+              },
+              {
+                "bool": {
+                  "must": [
+                    {
+                      "terms": {
+                        "groupId": [
+                          "20119"
+                        ]
+                      }
+                    },
+                    {
+                      "terms": {
+                        "scopeGroupId": [
+                          "20119"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "bool": {
+                  "should": [
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "term": {
+                              "entryClassName": {
+                                "value": "com.liferay.wiki.model.WikiPage"
+                              }
+                            }
+                          },
+                          {
+                            "terms": {
+                              "status": [
+                                "0"
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "term": {
+                              "entryClassName": {
+                                "value": "com.liferay.blogs.model.BlogsEntry"
+                              }
+                            }
+                          },
+                          {
+                            "terms": {
+                              "status": [
+                                "0"
+                              ]
+                            }
+                          },
+                          {
+                            "terms": {
+                              "status": [
+                                "0"
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "term": {
+                              "entryClassName": {
+                                "value": "com.liferay.dynamic.data.mapping.model.DDMFormInstanceRecord"
+                              }
+                            }
+                          },
+                          {
+                            "term": {
+                              "status": {
+                                "value": "0"
+                              }
+                            }
+                          },
+                          {
+                            "term": {
+                              "status": {
+                                "value": "0"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "term": {
+                              "entryClassName": {
+                                "value": "com.liferay.bookmarks.model.BookmarksEntry"
+                              }
+                            }
+                          },
+                          {
+                            "terms": {
+                              "status": [
+                                "0"
+                              ]
+                            }
+                          },
+                          {
+                            "terms": {
+                              "status": [
+                                "0"
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "term": {
+                              "entryClassName": {
+                                "value": "com.liferay.journal.model.JournalArticle"
+                              }
+                            }
+                          },
+                          {
+                            "term": {
+                              "head": {
+                                "value": "true"
+                              }
+                            }
+                          },
+                          {
+                            "terms": {
+                              "status": [
+                                "0"
+                              ]
+                            }
+                          }
+                        ],
+                        "should": [
+                          {
+                            "range": {
+                              "expirationDate": {
+                                "from": "20190830152702",
+                                "to": null,
+                                "include_lower": false,
+                                "include_upper": false,
+                                "format": "yyyyMMddHHmmss"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "term": {
+                              "entryClassName": {
+                                "value": "com.liferay.journal.model.JournalFolder"
+                              }
+                            }
+                          },
+                          {
+                            "terms": {
+                              "status": [
+                                "0"
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "term": {
+                              "entryClassName": {
+                                "value": "com.liferay.calendar.model.CalendarBooking"
+                              }
+                            }
+                          },
+                          {
+                            "terms": {
+                              "status": [
+                                "0"
+                              ]
+                            }
+                          },
+                          {
+                            "terms": {
+                              "status": [
+                                "0"
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "term": {
+                              "entryClassName": {
+                                "value": "com.liferay.document.library.kernel.model.DLFileEntry"
+                              }
+                            }
+                          },
+                          {
+                            "term": {
+                              "hidden": {
+                                "value": "false"
+                              }
+                            }
+                          },
+                          {
+                            "term": {
+                              "hidden": {
+                                "value": "false"
+                              }
+                            }
+                          },
+                          {
+                            "terms": {
+                              "status": [
+                                "0"
+                              ]
+                            }
+                          },
+                          {
+                            "terms": {
+                              "status": [
+                                "0"
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "term": {
+                              "entryClassName": {
+                                "value": "com.liferay.portal.kernel.model.User"
+                              }
+                            }
+                          },
+                          {
+                            "term": {
+                              "status": {
+                                "value": "0"
+                              }
+                            }
+                          },
+                          {
+                            "term": {
+                              "status": {
+                                "value": "0"
+                              }
+                            }
+                          }
+                        ],
+                        "must_not": [
+                          {
+                            "term": {
+                              "defaultUser": {
+                                "value": "true"
+                              }
+                            }
+                          },
+                          {
+                            "term": {
+                              "defaultUser": {
+                                "value": "true"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "term": {
+                              "entryClassName": {
+                                "value": "com.liferay.bookmarks.model.BookmarksFolder"
+                              }
+                            }
+                          },
+                          {
+                            "terms": {
+                              "status": [
+                                "0"
+                              ]
+                            }
+                          },
+                          {
+                            "terms": {
+                              "status": [
+                                "0"
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "term": {
+                              "entryClassName": {
+                                "value": "com.liferay.document.library.kernel.model.DLFolder"
+                              }
+                            }
+                          },
+                          {
+                            "term": {
+                              "hidden": {
+                                "value": "false"
+                              }
+                            }
+                          },
+                          {
+                            "term": {
+                              "hidden": {
+                                "value": "false"
+                              }
+                            }
+                          },
+                          {
+                            "terms": {
+                              "status": [
+                                "0"
+                              ]
+                            }
+                          },
+                          {
+                            "terms": {
+                              "status": [
+                                "0"
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "term": {
+                              "entryClassName": {
+                                "value": "com.liferay.portal.kernel.model.Layout"
+                              }
+                            }
+                          },
+                          {
+                            "terms": {
+                              "type": [
+                                "content"
+                              ]
+                            }
+                          },
+                          {
+                            "terms": {
+                              "type": [
+                                "content"
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "term": {
+                              "entryClassName": {
+                                "value": "com.liferay.dynamic.data.lists.model.DDLRecord"
+                              }
+                            }
+                          },
+                          {
+                            "term": {
+                              "status": {
+                                "value": "0"
+                              }
+                            }
+                          },
+                          {
+                            "term": {
+                              "recordSetScope": {
+                                "value": "0"
+                              }
+                            }
+                          },
+                          {
+                            "term": {
+                              "status": {
+                                "value": "0"
+                              }
+                            }
+                          },
+                          {
+                            "term": {
+                              "recordSetScope": {
+                                "value": "0"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "term": {
+                              "entryClassName": {
+                                "value": "com.liferay.message.boards.model.MBMessage"
+                              }
+                            }
+                          },
+                          {
+                            "term": {
+                              "discussion": {
+                                "value": "false"
+                              }
+                            }
+                          },
+                          {
+                            "term": {
+                              "discussion": {
+                                "value": "false"
+                              }
+                            }
+                          },
+                          {
+                            "terms": {
+                              "status": [
+                                "0"
+                              ]
+                            }
+                          },
+                          {
+                            "terms": {
+                              "status": [
+                                "0"
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "term": {
+                              "entryClassName": {
+                                "value": "com.liferay.knowledge.base.model.KBArticle"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "explain": true,
+  "stored_fields": "*",
+  "track_scores": true,
+  "aggregations": {
+    "com_liferay_portal_search_web_category_facet_portlet_CategoryFacetPortlet": {
+      "terms": {
+        "field": "assetCategoryIds",
+        "size": 10,
+        "min_doc_count": 1,
+        "shard_min_doc_count": 0,
+        "show_term_doc_count_error": false,
+        "order": [
+          {
+            "_count": "desc"
+          },
+          {
+            "_key": "asc"
+          }
+        ]
+      }
+    },
+    "com_liferay_portal_search_web_folder_facet_portlet_FolderFacetPortlet": {
+      "terms": {
+        "field": "folderId",
+        "size": 10,
+        "min_doc_count": 1,
+        "shard_min_doc_count": 0,
+        "show_term_doc_count_error": false,
+        "order": [
+          {
+            "_count": "desc"
+          },
+          {
+            "_key": "asc"
+          }
+        ]
+      }
+    },
+    "com_liferay_portal_search_web_type_facet_portlet_TypeFacetPortlet": {
+      "terms": {
+        "field": "entryClassName",
+        "size": 10,
+        "min_doc_count": 1,
+        "shard_min_doc_count": 0,
+        "show_term_doc_count_error": false,
+        "order": [
+          {
+            "_count": "desc"
+          },
+          {
+            "_key": "asc"
+          }
+        ]
+      }
+    },
+    "com_liferay_portal_search_web_tag_facet_portlet_TagFacetPortlet": {
+      "terms": {
+        "field": "assetTagNames.raw",
+        "size": 10,
+        "min_doc_count": 1,
+        "shard_min_doc_count": 0,
+        "show_term_doc_count_error": false,
+        "order": [
+          {
+            "_count": "desc"
+          },
+          {
+            "_key": "asc"
+          }
+        ]
+      }
+    },
+    "modified": {
+      "range": {
+        "field": "modified",
+        "ranges": [
+          {
+            "key": "[20190830142702 TO 20190830152702]",
+            "from": "20190830142702",
+            "to": "20190830152702"
+          },
+          {
+            "key": "[20190829152702 TO 20190830152702]",
+            "from": "20190829152702",
+            "to": "20190830152702"
+          },
+          {
+            "key": "[20190823152702 TO 20190830152702]",
+            "from": "20190823152702",
+            "to": "20190830152702"
+          },
+          {
+            "key": "[20190730152702 TO 20190830152702]",
+            "from": "20190730152702",
+            "to": "20190830152702"
+          },
+          {
+            "key": "[20180830152702 TO 20190830152702]",
+            "from": "20180830152702",
+            "to": "20190830152702"
+          }
+        ],
+        "keyed": false
+      }
+    },
+    "com_liferay_portal_search_web_user_facet_portlet_UserFacetPortlet": {
+      "terms": {
+        "field": "userName",
+        "size": 10,
+        "min_doc_count": 1,
+        "shard_min_doc_count": 0,
+        "show_term_doc_count_error": false,
+        "order": [
+          {
+            "_count": "desc"
+          },
+          {
+            "_key": "asc"
+          }
+        ]
+      }
+    },
+    "com_liferay_portal_search_web_site_facet_portlet_SiteFacetPortlet": {
+      "terms": {
+        "field": "groupId",
+        "size": 10,
+        "min_doc_count": 1,
+        "shard_min_doc_count": 0,
+        "show_term_doc_count_error": false,
+        "order": [
+          {
+            "_count": "desc"
+          },
+          {
+            "_key": "asc"
+          }
+        ]
+      }
+    }
+  },
+  "highlight": {
+    "pre_tags": [
+      "<liferay-hl>"
+    ],
+    "post_tags": [
+      "</liferay-hl>"
+    ],
+    "require_field_match": true,
+    "fields": {
+      "content_zh_CN": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "title_es_ES": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "description_ja_JP": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "content_fi_FI": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "description_fr_FR": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "description": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "description_ca_ES": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "description_de_DE": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "description_hu_HU": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "title_ar_SA": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "description_ar_SA": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "title": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "title_nl_NL": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "content": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "description_pt_BR": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "title_ja_JP": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "content_sv_SE": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "description_es_ES": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "title_pt_BR": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "content_fr_FR": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "title_fi_FI": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "description_nl_NL": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "title_ca_ES": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "content_en_US": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "assetCategoryTitles": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "content_ca_ES": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "content_de_DE": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "content_hu_HU": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "description_fi_FI": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "fullName": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "content_pt_BR": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "content_es_ES": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "content_ar_SA": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "title_zh_CN": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "description_zh_CN": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "content_nl_NL": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "title_sv_SE": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "content_ja_JP": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "description_en_US": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "description_sv_SE": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "title_en_US": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "title_de_DE": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "title_hu_HU": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      },
+      "title_fr_FR": {
+        "fragment_size": 80,
+        "number_of_fragments": 3
+      }
+    }
+  },
+  "rescore": {
+    "query": {
+      "rescore_query": {
+        "sltr": {
+          "params": {
+            "keywords": "alien"
+          },
+          "model": "test_6"
+        }
+      }
+    },
+    "window_size": 1000
+  }
+}
